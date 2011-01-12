@@ -1,0 +1,88 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Faire des marges un peu moins large que celles par défaut
+\usepackage[top=20mm, bottom=20mm, left=25mm, right=25mm]{geometry}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc} % Pour l'encodage 
+% Reconnaitre les caratères accentués dans le source.
+\usepackage[T1]{fontenc} 
+% Meilleurs polices
+%\usepackage{concmath}
+%commenter les 2 lignes suivantes pour passer en anglais
+\usepackage[francais]{babel}
+\NoAutoSpaceBeforeFDP
+
+% Insertion d'images
+\usepackage{graphicx}
+% Pour le listing de code
+%\usepackage{listings}
+% Pour la coloration syntaxique
+\usepackage{xcolor}
+% Pour fixer l'interlignage
+\usepackage{setspace} 
+% Pour faire un index (ici glossaire)
+\usepackage{makeidx}
+% Pour gérer les liens internes et les URL cliquables
+\usepackage{url}
+% Pour les headers et footers
+\usepackage{fancyhdr}
+% Pour le logo en haut a droite
+%\usepackage{eso-pic} 
+% Pour l'enroulement du texte autour des figures
+\usepackage{wrapfig}
+% Pour la couverture en PDF pleine page
+\usepackage{pdfpages} 
+% Pour la biblio bibtex
+\usepackage{bibunits}
+% Pour gérer les éléments flottants
+\usepackage{float}
+% Pour les cadres à ombrage du glossaire
+\usepackage{fancybox}
+% Pour faire des sous-figures correctement numérotés
+\usepackage{subfigure}
+% Pour mettre les liens cliquables
+\usepackage{hyperref}
+
+
+\setlength{\headheight}{14.5pt}
+
+\newcommand{\centeredimage}[4]{%
+	\begin{center}
+		\includegraphics[width=#2]{#1}
+		~\\ \emph{#3},
+		~\\ #4
+	\end{center}
+}
+
+
+
+
+\usepackage{wrapfig}
+\newcommand{\sideimage}[4]{%
+\begin{wraptable}{r}{#2+1em}
+  \begin{flushright}
+  \vspace{-0.9cm}
+    \includegraphics[width=#2]{#1}
+  %\vspace{-0.8cm}
+  ~\\ \emph{#3}, 
+  ~\\#4
+  \end{flushright}
+  \vspace{-0.6cm}
+\end{wraptable}
+}
+
+
+\newcommand{\xspace}{\vspace{0.6cm}}
+
+\newcommand{\chapterseparator}{~\\ \begin{center} * * * \end{center} ~\\}
+
+\newcommand{\partseparator}{~\\ \begin{center} * * * * * \end{center} ~\\}
+
+% Couleur des url et des liens internes.
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true}
+
+%headers, footers
+\pagestyle{fancy}
+
+\cfoot{\thepage}
+
